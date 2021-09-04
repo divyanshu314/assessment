@@ -1,0 +1,24 @@
+<!--Login Card-->
+<div class="container">
+<mat-card>
+    <mat-card-title>AXY Ltd.</mat-card-title>
+<mat-card-content>
+<form #loginForm="ngForm">
+  <p>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Email" name="email" [(ngModel)]="emailId" required>
+    </mat-form-field>
+  </p>
+
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p>
+
+  <div class="button">
+    <button type="submit" (click)="verifyUser()" mat-button>Login</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>
+</div>
